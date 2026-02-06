@@ -1,4 +1,5 @@
 body{
+  user-select: none;
   font-family: "Poppins",Sans-Serif;
   display: flex;
   flex-direction: column;
