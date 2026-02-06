@@ -1,0 +1,127 @@
+body{
+  font-family: "Poppins",Sans-Serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom,#f8c8dc,#e57373,#f8c8dc);
+}
+#revealbtn{
+  border: none;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  padding: 20px;
+  background: #ac1eb7;
+  opacity: 0.7;
+  color: white;
+}
+.container{
+  opacity: 0;
+  flex: 1;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.card{
+  border: 3px dashed rgba(255,0,100,0.4);
+  border-radius: 50px;
+  background: rgba(255,255,255,0.5);
+  width: 80%;
+  height: 300px;
+  position: relative;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.card p{
+  font-size: 0.8rem;
+  text-align: left;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+}
+.rose-image{
+  z-index: -1;
+  position: absolute;
+}
+.rose-image img{
+  width: 180px;
+  position: static;
+}
+.ribbon{
+  width: 100%;
+  height: auto;
+}
+.hearts{
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+}
+.heart1{
+  transform: translate(10%,30%) rotate(-30deg);
+}
+.heart2{
+  transform: translate(20%,20%) rotate(-30deg);
+}
+.heart3{
+  transform: translate(30%,10%) rotate(-30deg);
+}
+h1{
+  opacity: 0;
+  display: none;
+  font-family: "Dancing script", cursive;
+  text-align: center;
+}
+footer{
+  opacity: 0;
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.show{
+  animation: show 1s ease-in-out forwards;
+}
+@keyframes show{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+.petal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal{
+  position: absolute;
+  top: -50px;
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 0, 80, 0.6);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  animation: fall linear infinite;
+}
+
+@keyframes fall{
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  60%{
+    opacity: 0.8;
+  }
+  100%{
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
