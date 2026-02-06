@@ -5,9 +5,12 @@ const message = "Dis rose iz not jast a philabar, its a ichmol simbal oph bhat a
 let messageIndex = 1;
 let messageInterval;
 function addLetters(){
-  messagePara.textContent = message.slice(0,messageIndex);
+  messagePara.textContent = message.slice(0,messageIndex)+"|";
   messageIndex++;
-  if(messageIndex>message.length) clearInterval(messageInterval);
+  if(messageIndex>message.length){
+    messagePara.textContent = message;
+    clearInterval(messageInterval);
+  }
 }
 function startTyping(){
   document.querySelector("audio").play();
